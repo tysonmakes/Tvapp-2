@@ -1,0 +1,6 @@
+{
+  "name": "TV Remote",
+  "description": "Smart TV remote controller for Android TV and Fire TV devices with auto-discovery, D-pad, media controls, and fast ADB connection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
