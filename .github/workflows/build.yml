@@ -28,21 +28,11 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build Debug APK
-        run: gradle assembleDebug --stacktrace
-
-      - name: Build Release APK
-        run: gradle assembleRelease --stacktrace || true
+        run: ./gradlew assembleDebug --stacktrace
 
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: TV-Remote-Debug-APK
           path: app/build/outputs/apk/debug/*.apk
-          retention-days: 30
-
-      - name: Upload All Generated APKs
-        uses: actions/upload-artifact@v4
-        with:
-          name: TV-Remote-All-APKs
-          path: app/build/outputs/apk/**/*.apk
           retention-days: 30
